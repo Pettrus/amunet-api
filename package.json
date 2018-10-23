@@ -1,0 +1,42 @@
+{
+  "name": "adonis-api-app",
+  "version": "4.1.0",
+  "adonis-version": "4.1.0",
+  "description": "Adonisjs boilerplate for API server with pre-configured JWT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node ace test"
+  },
+  "keywords": [
+    "adonisjs",
+    "adonis-app"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@adonisjs/ace": "^5.0.2",
+    "@adonisjs/auth": "^3.0.5",
+    "@adonisjs/bodyparser": "^2.0.3",
+    "@adonisjs/cors": "^1.0.6",
+    "@adonisjs/fold": "^4.0.8",
+    "@adonisjs/framework": "^5.0.7",
+    "@adonisjs/ignitor": "^2.0.6",
+    "@adonisjs/lucid": "^5.0.4",
+    "adonis-scheduler": "^3.0.2",
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "pg": "^7.4.3",
+    "postgresql": "0.0.1",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
+    "srt-to-vtt": "^1.1.3",
+    "unzipper": "^0.9.3",
+    "webtorrent": "^0.102.4"
+  },
+  "devDependencies": {},
+  "autoload": {
+    "App": "./app"
+  }
+}
