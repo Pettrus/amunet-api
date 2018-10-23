@@ -1,28 +1,42 @@
-# Adonis API application
+# Amunet API
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+Esse projeto foi feito em adonisjs com reactjs como [frontend](https://github.com/Pettrus/amunet-frontend)
 
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+![Screenshot 1](https://github.com/Pettrus/amunet-frontend/blob/master/screenshot2.jpg)
 
-## Setup
+## Como inciar o projeto
 
-Use the adonis command to install the blueprint
-
+Primeiro você deve criar um arquivo chamado .env alterando os valores de conexões e senhas de acordo com o seu local, já foi incluido um arquivo chamado .env.example que contem todos o nome das variáveis
 ```bash
-adonis new yardstick --api-only
+HOST=0.0.0.0
+PORT=8080
+NODE_ENV=development
+
+APP_NAME=Amunet
+APP_URL=http://${HOST}:${PORT}
+
+CACHE_VIEWS=false
+
+DB_CONNECTION=pg
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=postgres
+DB_PASSWORD=SENHA
+DB_DATABASE=amunet
+
+HASH_DRIVER=bcrypt
+
+CAMINHO_STREAM='CAMINHO_FISICO_ONDE_ARQUIVOS_SERAO_SALVOS'
 ```
 
-or manually clone the repo and then run `npm install`.
-
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
+Depois que o banco foi criado e a conexão esteja estabelecida use o comando para migrar as tabelas
+```bash
 adonis migration:run
 ```
+
+Para iniciar o projeto
+```bash
+adonis serve --dev
+```
+
+Para produção recomendo utilizar [PM2](https://github.com/Unitech/pm2)
